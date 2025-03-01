@@ -1,0 +1,377 @@
+.Quan{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.maincuoi{
+  background-color: #F0F3F7;
+}
+.thanhtieude1 {
+  width: 1180px;
+  height: 52px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+}
+.thanhdoc {
+  border-right: 1px solid #f0f0f0;
+  height: 20px;
+  margin: 15px 10px;
+}
+.tentieude1 {
+  text-decoration: none;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 22px;
+  color: #094eff;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.menu1-1 a {
+  text-decoration: none;
+  display: flex;
+}
+.menucon1-1 {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.xemthem1 {
+  margin-top: 15px;
+}
+.xemthem1 a {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  margin-left: 650px;
+  text-decoration: none;
+}
+.khungsp1{
+  width: 1180px;
+  height: 127px;
+  margin-top: 7px;
+  display: flex;
+  transition-duration: 0.3s;  
+}
+.khungsp1 :hover{
+    transform: scale(1.03);
+}
+.sp1{
+  width: 290px;
+  height: 127px;
+  background-color: white;
+  display: flex;
+  margin-right: 7px;
+}
+.anhsp1{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.anhsp1 img{
+  width: 80px;
+  height: 80px;
+}
+.noidungsp1{
+  padding: 15px 25px 10px;
+}
+.noidungsp1 a{
+  text-decoration: none;
+}
+.tensp1{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+.danhgiasp1{
+  font-family: arial;
+  font-size: 10px;
+  color: black;
+  padding: 8px 0px;
+}
+.giakmsp1{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 15px;
+  color: red;
+}
+.giasp1{
+  font-family: arial;
+  font-size: 10px;
+  color: #999999;
+  text-decoration:line-through solid #999999;
+}
+.sp3{
+  width: 290px;
+  height: 127px;
+  background-color: white;
+  display: flex;
+}
+.anhsp3{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.anhsp3 img{
+  width: 80px;
+  height: 80px;
+}
+.noidungsp3{
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+.noidungsp3 a{
+  text-decoration: none;
+}
+.tensp3{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+.danhgiasp3{
+  font-family: arial;
+  font-size: 10px;
+  color: black;
+  padding: 8px 0px;
+}
+.giakmsp3{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 15px;
+  color: red;
+}
+.giasp3{
+  font-family: arial;
+  font-size: 10px;
+  color: #999999;
+  text-decoration:line-through solid #999999;
+}
+.logocacnhanhang{
+  display: flex;
+  width: 1180px;
+  margin-top: 50px;
+  transition-duration: 0.3s;  
+}
+.logocacnhanhang :hover{
+    transform: scale(1.03);
+}
+.nhanhang{
+  width: 166px;
+  height: 100px;
+}
+.thanhtieude2{
+  width: 1180px;
+  height: 52px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 30px;
+}
+.tentieude2{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+  color:#094eff;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.menu2-1 a {
+  text-decoration: none;
+  display: flex;
+}
+.menucon2-1 {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.xemthem2 {
+  margin-top: 15px;
+}
+.xemthem2 a {
+  font-family: arial;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+  margin-left: 750px;
+  text-decoration: none;
+}
+.bantincongnghe{
+  width: 1180px;
+  height: 350px;
+  margin-top: 7px;
+  display: flex;
+}
+.bt1{
+  width: 290px;
+  height: 350px;
+  background-color: white;
+  margin-right: 7px;
+}
+.anh1{
+  height: 156px;
+  width: 290px;
+}
+.anh1 img{
+  margin-left: 10px;
+  height: 150px;
+  width: 260px;
+  margin-top: 6px;
+  transition-duration: 0.3s;  
+}
+.anh1 img:hover{
+    transform: scale(1.03);
+}
+
+.noidung1{
+  margin-top: 10px;
+  width: 290px;
+}
+.noidung1 a{
+  text-decoration: none;
+}
+.tieudend1{
+  font-family: arial;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.noidungchinh1{
+  font-family: arial;
+  font-size: 14px;
+  color: #999999;
+  margin: 15px 10px;
+}
+.thanhngang{
+  width: 270px;
+  margin-left: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.cuoibt1{
+  display: flex;
+}
+.thoigiandang1{
+  font-family: arial;
+  font-size: 12px;
+  color: #999999;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.phanxemthem1{
+  margin-left: 100px;
+  margin-top: 10px;
+  border: 1px solid red;
+  border-radius: 30px;
+  width: 100px;
+  height: 30px;
+
+}
+.phanxemthem1 a{
+  text-decoration: none;
+}
+.xemchitiet1{
+  font-family: arial;
+  font-size: 15px;
+  color: red;
+  margin: 5px 10px;
+}
+/* Reset styles */
+body, h1, h2, p, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overlay giỏ hàng */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart-overlay.hidden {
+  display: none; /* Ẩn overlay */
+}
+
+/* Giao diện giỏ hàng */
+.cart {
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.cart h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart-empty img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.cart-empty-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart-empty p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cart-empty button {
+  background-color: #d50000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-empty button:hover {
+  background-color: #b00000;
+}
+
+/* Nút đóng giỏ hàng */
+.close-cart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-cart-btn:hover {
+  color: #d50000;
+}
