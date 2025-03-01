@@ -1,0 +1,1033 @@
+.binhtongcabai {
+    width: 100%;
+    height: 2143px;
+}
+
+.binhtong {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    height: 682px;
+    background-color: #F0F3F7;
+}
+
+.binhtong1 {
+    width: 1180px;
+    height: 65px;
+}
+
+.giovang {
+    display: flex;
+}
+
+.giovang i {
+    font-size: 34px;
+    color: #FFCB11;
+    margin-left: 117px;
+    margin-top: 20px;
+}
+
+.txt1giovang {
+    font-size: 34px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #EE1926;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.box1giovang {
+    width: 150px;
+    height: 30px;
+    margin-left: 210px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.txt1box1giovang {
+    margin-left: 30px;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #434445;
+    font-family: Arial;
+}
+
+.txt2box1giovang {
+    margin-top: 3px;
+    font-size: 13px;
+    color: #000000;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.boxclock {
+    width: 180px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hour {
+    margin-top: 6px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#minute {
+    margin-top: 6px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#second {
+    margin-top: 6px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0. 5rem;
+    color: #FFFFFF;
+    background-color: #EE1926;
+    position: relative;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Arial;
+    width: 110px;
+    height: 60px;
+    margin-right: 8px;
+}
+
+.clock p {
+    margin-top: 1px;
+    font-size: 15px;
+}
+
+.binhtong2 {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    margin-top: 82px;
+    background-color: #000197;
+    border-radius: 25px;
+    justify-content: center;
+    display: flex;
+}
+
+.binhtong2-1 {
+    height: 546px;
+    width: 1202px;
+    margin-top: 27px;
+    display: flex;
+}
+
+.boxbinhtong2-1 {
+    width: 293px;
+    height: 546px;
+    background-color: #FFFFFF;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.boxbinhtong2-1:hover {
+    transform: scale(1.05);
+}
+
+.binh1 {
+    width: 295px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binh1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh1:hover img {
+    opacity: 0;
+}
+
+.binh1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binh1-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh1:hover::after {
+    opacity: 1;
+}
+
+.binh2 {
+    width: 295px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binh2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh2:hover img {
+    opacity: 0;
+}
+
+.binh2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binh2-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh2:hover::after {
+    opacity: 1;
+}
+
+.binh3 {
+    width: 295px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binh3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh3:hover img {
+    opacity: 0;
+}
+
+.binh3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binh3-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh3:hover::after {
+    opacity: 1;
+}
+
+.binh4 {
+    width: 295px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binh4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh4:hover img {
+    opacity: 0;
+}
+
+.binh4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binh4-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binh4:hover::after {
+    opacity: 1;
+}
+
+.boxbinhtong2-1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.boxbinhtong2-1 a:hover {
+    color: blue;
+}
+
+.txt1boxbinhtong2-1 {
+    font-family: Arial;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+    line-height: 23px;
+}
+
+.boxbinhdanhgia {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.boxbinhdanhgia i {
+    margin-right: 3px;
+    font-size: 13px;
+    color: #E0E621;
+}
+
+.txtboxbinhdanhgia {
+    font-size: 17px;
+    font-family: Arial;
+    margin-left: 3px;
+}
+
+.boxbinhgia {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.boxbinhgia1 {
+    width: 150px;
+    height: 45px;
+}
+
+.boxbinhgia2 {
+    width: 45px;
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 58px;
+    border-radius: 4px;
+    background-color: #EE1926;
+}
+
+.txt1boxbinhgia1 {
+    font-family: Arial;
+    font-weight: bold;
+    color: #EE1926;
+    font-size: 20px;
+}
+
+.txt2boxbinhgia1 {
+    font-family: Arial;
+    text-decoration: line-through;
+    /*gạch chân giữa chữ trong giá*/
+    font-weight: bold;
+    color: #999999;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.txt1boxbinhgia2 {
+    padding: 7px 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #FFFEFE;
+    font-size: 14px;
+}
+
+.binhradio {
+    display: flex;
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.binhtuychon1 {
+    width: 252px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #EE1926;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.binhtuychon1:hover {
+    background-color: #FF1B2A;
+}
+
+.txtbinhtuychon1 {
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    padding: 9px 85px;
+}
+
+.binhradio img {
+    width: 35px;
+    margin-right: 5px;
+    margin-top: 14px;
+}
+
+.txtbinhradio {
+    margin-top: 23px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.txtduoiradio {
+    font-family: Arial;
+    font-size: 14px;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+.borderboxbinhtong2-1 {
+    border: 2px solid #EE1926;
+    margin: 0px 20px;
+    margin-top: 5px;
+}
+
+.binhtongtiep {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 800px;
+    background-color: #F0F3F7;
+}
+
+.binhtong3 {
+    width: 1180px;
+    height: 135px;
+    margin-top: 110px;
+    position: relative;
+}
+
+.binhmagg1 {
+    width: 265px;
+    height: 115px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px 13px;
+    margin-right: 5px;
+}
+
+.txtbinhmgg1 {
+    display: flex;
+}
+
+.txt1binhmagg1 {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    color: #0056E7;
+}
+
+.txt2binhmagg1 {
+    font-size: 13px;
+    font-family: Arial;
+    color: #666666;
+    margin-left: 30px;
+}
+
+.txt3binhmagg1 {
+    font-size: 13px;
+    font-family: Arial;
+    margin-top: 10px;
+}
+
+.borderbinhmgg {
+    border: 1px dashed #ECECEC;
+    margin-top: 10px;
+}
+
+.binhtong3 {
+    display: flex;
+}
+
+.btnbinhmagg {
+    display: flex;
+    margin-top: 10px;
+}
+
+.btnbinhmagg a {
+    text-decoration: none;
+}
+
+.btnbinhmagg1 {
+    height: 23px;
+    width: 120px;
+    border: 1px solid #EE232F;
+    color: #EE232F;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 7px;
+    font-family: Arial;
+    font-size: 13px;
+    transition-duration: 0.3s;
+}
+
+.btnbinhmagg1:hover {
+    transform: scale(1.1);
+}
+
+.btnbinhmagg1:hover {
+    background-color: #DF1825;
+    color: white;
+}
+
+.btnbinhmagg2 {
+    height: 23px;
+    width: 120px;
+    color: #464646;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 7px;
+    font-family: Arial;
+    font-size: 13px;
+    background-color: #EBEBEB;
+    margin-left: 20px;
+    cursor: not-allowed;
+    /*con trỏ cấm trong (hết hạn)*/
+}
+
+.btnbinhmagg3 {
+    height: 23px;
+    width: 120px;
+    color: white;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 7px;
+    font-family: Arial;
+    font-size: 13px;
+    background-color: #EE1926;
+    margin-left: 20px;
+    transition-duration: 0.3s;
+}
+
+.btnbinhmagg3:hover {
+    background-color: #FF1B2A;
+    transform: scale(1.1);
+}
+
+.binhtong4 {
+    width: 1180px;
+    height: 500px;
+    background-image: url(../../public/images/binhnentiktok.jpg);
+    position: absolute;
+    margin-top: 300px;
+}
+
+.binhtong4-1 {
+    width: 650px;
+    height: 415px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-left: 265px;
+}
+
+.binhthanhtiktok {
+    display: flex;
+}
+
+.binhthanhtiktok {
+    display: flex;
+}
+
+.binhthanhtiktok {
+    padding-top: 20px;
+    padding-left: 20px
+}
+
+.binhthanhtiktok1 img {
+    width: 95px;
+}
+
+.binhthanhtiktok2 {
+    width: 200px;
+    height: 70px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.binhthanhtiktok2-1 a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial;
+    color: black;
+}
+
+.binhthanhtiktok2-1 a:hover {
+    border-bottom: 1px solid black;
+}
+
+.binhthanhtiktok2-2 a {
+    text-decoration: none;
+    font-family: Arial;
+    color: #50525A;
+}
+
+.binhthanhtiktok2-2 a:hover {
+    border-bottom: 1px solid #50525A;
+}
+
+.binhthanhtiktok2-2 {
+    margin-top: 5px;
+}
+
+.binhvideotiktok {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 600px;
+    height: 210px;
+}
+
+.binhvideotiktok img {
+    width: 149px;
+    height: 200px;
+}
+
+.binhvideotiktok a {
+    text-decoration: none;
+    margin-right: 1px;
+}
+
+.binhthanhduoitiktok {
+    display: flex;
+}
+
+.binhthanhduoitiktok1 {
+    width: 173px;
+    height: 35px;
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.binhthanhduoitiktok1-1 {
+    width: 200px;
+}
+
+.binhthanhduoitiktok1-2 {
+    font-family: Arial;
+    font-size: 12px;
+    color: #8A8B91;
+    margin-top: 3px;
+}
+
+.binhthanhduoitiktok1-2:hover {
+    border-bottom: 1px solid #8A8B91;
+}
+
+.binhthanhduoitiktok2 {
+    width: 100px;
+    height: 28px;
+    margin-top: 17px;
+    margin-left: 293px;
+    background-color: #FE2C55;
+}
+
+.binhthanhduoitiktok2:hover {
+    background-color: #EA284E;
+}
+
+.txtbinhthanhduoitiktok2 {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-top: 6px;
+    margin-left: 13px;
+}
+
+.binhthanhduoitiktok2 a {
+    text-decoration: none;
+}
+
+.binhthanhduoitiktok1 a {
+    text-decoration: none;
+}
+
+.binhtongtiep1 {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 660px;
+    background-color: #F0F3F7;
+}
+
+.binhtong5 {
+    width: 1180px;
+    height: 60px;
+    margin-top: 50px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+}
+
+.binhspbanchay1 {
+    height: 25px;
+    width: 185px;
+    padding-left: 25px;
+    border-right: 1px solid #EBEBEB;
+    margin-top: 15px;
+}
+
+.binhspbanchay1 a {
+    text-decoration: none;
+}
+
+
+.txtbinhspbanchay1 {
+    font-size: 23px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #094EFF;
+}
+
+.txtbinhspbanchay1:hover {
+    color: #3A71FF;
+}
+
+.binhspbanchay2 {
+    height: 25px;
+    width: 110px;
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+.binhspbanchay2 a {
+    text-decoration: none;
+}
+
+.txtbinhspbanchay2 {
+    font-size: 12px;
+    margin-top: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: black;
+}
+
+.binhspbanchay3 {
+    height: 25px;
+    width: 110px;
+    margin-top: 15px;
+}
+
+.binhspbanchay3 a {
+    text-decoration: none;
+}
+
+.txtbinhspbanchay3 {
+    font-size: 12px;
+    margin-top: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #999999;
+}
+
+.txtbinhspbanchay3:hover {
+    color: black;
+}
+
+.binhspbanchay4 {
+    height: 25px;
+    width: 80px;
+    margin-top: 15px;
+    margin-left: 525px;
+}
+
+.binhspbanchay4 a {
+    text-decoration: none;
+}
+
+.txtbinhspbanchay4 {
+    font-size: 12px;
+    margin-top: 6px;
+    font-family: Arial;
+    font-weight: bold;
+    color: black;
+}
+
+.txtbinhspbanchay4:hover {
+    color: #3A71FF;
+}
+
+.binhtong6 {
+    position: absolute;
+    height: 546px;
+    width: 1180px;
+    margin-top: 120px;
+    display: flex;
+}
+
+.box1binhtong6 {
+    width: 285px;
+    height: 536px;
+    margin-right: 13px;
+    border-radius: 4px;
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+.box1binhtong6:hover {
+    transform: scale(1.03);
+}
+
+.box2binhtong6 {
+    width: 285px;
+    height: 536px;
+    border-radius: 4px;
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+.box2binhtong6:hover {
+    transform: scale(1.03);
+}
+
+.binhcuoi1 img {
+    width: 285px;
+}
+
+.binhcuoi1 {
+    width: 285px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binhcuoi1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi1:hover img {
+    opacity: 0;
+}
+
+.binhcuoi1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binht4-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi1:hover::after {
+    opacity: 1;
+}
+
+.txtbinhcuoi1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.txtbinhcuoi1 a:hover {
+    color: #094EFF;
+}
+
+.binhtuychon1 {
+    width: 252px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #EE1926;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition-duration: 0.3s;
+}
+
+.binhtuychon1:hover {
+    transform: scale(1.1);
+}
+
+.binhtuychon1:hover {
+    background-color: #FF1B2A;
+}
+
+.txtbinhtuychon1 {
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    padding: 10px 90px;
+}
+
+.binhtuychon2 {
+    width: 252px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #EE1926;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition-duration: 0.3s;
+}
+
+.binhtuychon2:hover {
+    transform: scale(1.1);
+}
+
+.binhtuychon2:hover {
+    background-color: #FF1B2A;
+}
+
+.txtbinhtuychon2 {
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    padding: 10px 70px;
+}
+
+.binhcuoi2 img {
+    width: 285px;
+}
+
+.binhcuoi2 {
+    width: 285px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binhcuoi2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi2:hover img {
+    opacity: 0;
+}
+
+.binhcuoi2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binht3-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi2:hover::after {
+    opacity: 1;
+}
+
+.binhcuoi3 img {
+    width: 285px;
+}
+
+.binhcuoi3 {
+    width: 285px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binhcuoi3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi3:hover img {
+    opacity: 0;
+}
+
+.binhcuoi3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binht2-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi3:hover::after {
+    opacity: 1;
+}
+
+.binhcuoi4 img {
+    width: 285px;
+}
+
+.binhcuoi4 {
+    width: 285px;
+    position: relative;
+    overflow: hidden;
+}
+
+.binhcuoi4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi4:hover img {
+    opacity: 0;
+}
+
+.binhcuoi4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/binht1-1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.binhcuoi4:hover::after {
+    opacity: 1;
+}

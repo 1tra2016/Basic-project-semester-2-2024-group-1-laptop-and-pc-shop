@@ -1,0 +1,68 @@
+.khungfooter{
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+}
+.footer{
+    display: flex;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer1{
+    margin-top: 20px;
+    width: 290px;
+    height: 240px;
+    margin-right: 7px;
+}
+.giancach{
+    margin-bottom: 10px;
+}
+.lienhe{
+    display: flex;
+}
+.hotline b{
+    color: red;
+    margin-right: 20px;
+}
+.iconxahoi img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.footer2{
+    width: 290px;
+    height: 240px;
+}
+.phandangkyuudai{
+    display: flex;
+}
+.nhapemail{
+    margin-right: 5px;
+}
+.dangky{
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    border-radius: 30px;
+}
+.dangky a{
+    text-decoration: none;
+}
+.nutdangky{
+    padding-top: 10px;
+    padding-left: 12px;
+    font-family: arial;
+    font-size: 10px;
+    color: white;
+}
+.congthanhtoan{
+    width: 100px;
+    height: 40px
+}
+.chu{
+    font-size: 10px;
+    font-family: arial;
+}

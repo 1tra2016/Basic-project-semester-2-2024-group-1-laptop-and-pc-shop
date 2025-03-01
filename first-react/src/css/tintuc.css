@@ -1,0 +1,536 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f3f7;
+}
+
+/* Header */
+.header-banner img {
+    width: 100%;
+    height: 35px;
+    display: block;
+}
+
+/* Main Info */
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 268px;
+    background-color: #f5f5f5;
+}
+
+.main-info .logo img {
+    height: 50px;
+}
+
+.main-info .search {
+    display: flex;
+    align-items: center;
+}
+
+.main-info .search input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.main-info .search button {
+    padding: 10px 20px;
+    background-color: #E60000;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-info .search button:hover {
+    background-color: #c00;
+}
+
+.login-cart {
+    display: flex;
+}
+
+.login-cart a {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.login-cart a:hover {
+    color: #E60000;
+}
+
+.login-cart a i {
+    margin-right: 5px;
+}
+
+/* Category Nav */
+.category-nav {
+    background-color: #EE1926;
+    color: white;
+    font-size: 12px;
+}
+
+.category-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 268px;
+}
+
+.category-nav .left,
+.category-nav .center,
+.category-nav .right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.category-nav .left .menu-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.category-nav .left .menu-icon i {
+    margin-right: 10px;
+}
+
+.category-nav .center a {
+    margin: 0 20px;
+}
+
+.category-nav .right a {
+    margin-left: 20px;
+}
+
+.category-nav .right a i {
+    margin-right: 10px;
+}
+
+.category-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.category-nav .nav-link:hover {
+    color: yellow;
+}
+
+/*and header*/
+
+/*main*/
+.binhmain {
+    width: 100%;
+    height: 1175px;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.binhmain1 {
+    width: 1160px;
+    height: 1175px;
+    position: absolute;
+}
+
+.binhmain2 {
+    display: flex;
+    margin-top: 8px;
+}
+
+.binhmain2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.txt1binhmain2 {
+    font-size: 12px;
+}
+
+.txt1binhmain2:hover {
+    color: #094EFF;
+}
+
+.txt2binhmain2 {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.txt3binhmain2 {
+    font-size: 12px;
+    margin-left: 8px;
+    color: #CBCBCC;
+}
+
+.binhmain3 {
+    width: 1160px;
+    height: 1135px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.binhtraimain3 {
+    width: 894px;
+    height: 1135px;
+}
+
+.binhphaimain3 {
+    width: 260px;
+    height: 1135px;
+    margin-left: 6px;
+}
+
+.binhphaimain3-1 {
+    width: 259px;
+    height: 270px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.binhphaimain3-2 {
+    width: 259px;
+    height: 90px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.binhtrai1 {
+    width: 894px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.txtbinhtrai1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #094EFF;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+.binhtrai2 {
+    height: 350px;
+    width: 893px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.binhtrai2-1 {
+    height: 350px;
+    width: 295px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.binhtrai2-2 {
+    height: 350px;
+    width: 295px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.binhtrai2-1-1 img {
+    width: 285px;
+    height: 145px;
+    margin-top: 5px;
+    margin-left: 5px;
+    transition-duration: 0.3s;
+}
+
+.binhtrai2-1-1 img:hover {
+    transform: scale(1.03);
+}
+
+.binhtrai2-1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.binhtrai2-2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.txt1binhtrai2-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.binhtrai2-1-2 {
+    padding: 10px;
+}
+
+.txt2binhtrai2-1 {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 8px;
+}
+
+.borderbinhtrai2-1 {
+    border: 1px solid #999999;
+    margin-top: 15px;
+}
+
+.binhtrai2-1-3 {
+    display: flex;
+}
+
+.binhtrai2-1-3 i {
+    color: #999999;
+    font-size: 13px;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.txt1binhtrai2-1-3 {
+    font-size: 13px;
+    color: #999999;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.btnbinhtrai2-1 {
+    height: 40px;
+    width: 90px;
+    border: 1px solid #F0313D;
+    margin-top: 3px;
+    border-radius: 22px;
+}
+
+.txtbtnbinhtrai2-1 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #F0313D;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.txt1binhtrai2-1-3 {
+    margin-right: 97px;
+}
+
+.binhdanhmuc {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 200px;
+    height: 20px;
+}
+
+.binhkhuyenmai {
+    font-size: 13px;
+    margin-top: 12px;
+    margin-left: 15px;
+    width: 220px;
+    height: 20px;
+    display: flex;
+}
+
+.binh1khuyenmai {
+    font-size: 13px;
+    margin-top: 12px;
+    margin-left: 15px;
+    width: 220px;
+    height: 20px;
+    display: flex;
+    font-weight: bold;
+}
+
+.binhphaimain3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.binhphaimain3 a:hover {
+    color: #0975FF;
+}
+
+.binhkhuyenmai1 {
+    margin-right: 100px;
+}
+
+.binhkhuyenmai2 {
+    margin-right: 100px;
+}
+
+.borderbinhdanhmuc {
+    border: 1px solid #EBEBEB;
+    width: 220px;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+.binhtt1 {
+    display: flex;
+}
+
+.binhtt1 img {
+    width: 90px;
+    height: 50px;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.txtbinhtt1 {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+.txtbinhtag {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.binhtag1 {
+    width: 53px;
+    height: 25px;
+    border: 1px solid #094EFF;
+    border-radius: 3px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.binhtag1-1 {
+    color: #094EFF;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 7px;
+}
+
+.binhtag2 {
+    width: 76px;
+    height: 25px;
+    border: 1px solid #094EFF;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.binhtag2-1 {
+    color: #094EFF;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.binhtag {
+    display: flex;
+}
+
+/*and main*/
+
+/*footer*/
+.khungfooter {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.footer {
+    display: flex;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer1 {
+    margin-top: 20px;
+    width: 290px;
+    height: 240px;
+    margin-right: 7px;
+}
+
+.giancach {
+    margin-bottom: 10px;
+}
+
+.lienhe {
+    display: flex;
+}
+
+.hotline b {
+    color: red;
+    margin-right: 20px;
+}
+
+.iconxahoi img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.footer2 {
+    width: 290px;
+    height: 240px;
+}
+
+.phandangkyuudai {
+    display: flex;
+}
+
+.nhapemail {
+    margin-right: 5px;
+}
+
+.dangky {
+    width: 60px;
+    height: 30px;
+    background-color: red;
+    border-radius: 30px;
+}
+
+.dangky a {
+    text-decoration: none;
+}
+
+.nutdangky {
+    padding-top: 10px;
+    padding-left: 12px;
+    font-family: arial;
+    font-size: 10px;
+    color: white;
+}
+
+.congthanhtoan {
+    width: 100px;
+    height: 40px
+}
+
+.chu {
+    font-size: 10px;
+    font-family: arial;
+}
+
+/*and footer*/
