@@ -4,21 +4,25 @@ html, body {
     display: flex;
     flex-direction: column; /* Stack content vertically */
 }
-
+.s1{
+    margin-top: 40px;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* Ensure the content takes up the remaining space */
     justify-content: center;
 }
-
+.dangnhap1{
+    margin: 30px;
+}
 .dangnhap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 400px;
+    width: 350px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -40,16 +44,16 @@ html, body {
 
 .dangnhap input[type="email"],
 .dangnhap input[type="password"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
 }
 
 .dangnhap .button {
-    width: 100%;
+    width: 88%;
     padding: 10px;
     background-color: red;
     color: white;
@@ -57,7 +61,7 @@ html, body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 20px;
 }
 
 .dangnhap .button:hover {

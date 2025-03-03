@@ -1,0 +1,38 @@
+
+footer{
+    background-color: rgb(35,56,113);
+    color:snow;
+  }
+  footer a{
+    color:rgb(176,180,183);
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom:10px;
+  }
+  .top li{
+    list-style: none;
+    list-style-position: inside;
+    margin:10px 20px;
+  }
+  .top li:hover>a{
+    color:snow;
+  }
+  .top ul{
+    margin: 0px;
+    padding:0px;
+  }
+  .logo{
+    width:25vw;
+  }
+  .copyright{
+    border-top:1px solid snow;
+    padding:20px 0px 5px;
+    text-align: center;
+    color:rgb(176,180,183);
+  }
+  
