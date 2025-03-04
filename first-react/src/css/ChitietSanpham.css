@@ -1,0 +1,132 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: white;
+}
+.main{
+    position: relative;
+    background-color: aliceblue;
+    margin: 0px 15vw 0px 10vw;
+}
+ul{
+    list-style: none;
+}
+ion-icon {
+    vertical-align:top;
+    margin-left: 3px;
+}
+.headerfake{
+    z-index: 1;
+    height: 165px;
+    background-color: rgb(196, 212, 212);
+}
+.vote{
+    padding:20px;
+    /* border: 1px solid black; */
+}
+.ketquadanhgia{
+    display: flex;
+    flex-direction: row;
+}
+.tongdanhgia{
+    flex-basis: 20%;
+    justify-items: center;
+}
+.tongdanhgia>p{
+    font-size: 50px;
+    font-weight: 800;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.tongdanhgia>h4{
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tongdanhgia>ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+}
+.tongdanhgia>button{
+    height: 40px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(220,38,38);
+    color: rgb(253,244,244);
+    font-size: 16px;
+    font-weight: 600;
+    border: 0px;
+    border-radius: 10px;
+}
+.chitietdanhgia{
+    flex-basis: 60%;
+}
+.chitietdanhgia>ul>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+}
+#progressBar{
+    margin: 0px 10px 0px 10px;
+    height: 30px;
+    width: 90%;
+}
+.locdanhgia{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 15vw;
+    margin-left: 20px;
+}
+
+.locdanhgia>ul{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+}
+.locdanhgia>ul>li{
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+    padding: 10px;
+}
+.locdanhgia>ul>li:first-child, .locdanhgia>ul>li:hover{
+    color: red;
+    border: 1px solid red;
+}
+.cmt, .uploadimages{
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+.cmt>input{
+    min-height: 20px;
+    width: 40vw;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    padding: 15px;
+}
+.cmt>button{
+    background-color: red;
+    color: whitesmoke;
+    height:50px;
+    padding:5px 10px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: larger;
+}
+#user-cmt{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    padding-bottom:5px;
+    padding-right:20vw;
+    height: fit-content;
+}
+#user-cmt>img{
+    margin-top: 15px;
+    margin-right:15px;
+    height:50px;
+}
