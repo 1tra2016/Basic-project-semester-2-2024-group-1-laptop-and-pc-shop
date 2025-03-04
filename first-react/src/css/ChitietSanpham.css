@@ -2,12 +2,11 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: white;
+    background-color: whitesmoke;
 }
-.main{
-    position: relative;
-    background-color: aliceblue;
-    margin: 0px 15vw 0px 10vw;
+a{
+    color: black;
+    text-decoration: none;
 }
 ul{
     list-style: none;
@@ -16,10 +15,195 @@ ion-icon {
     vertical-align:top;
     margin-left: 3px;
 }
+.main{
+    position: relative;
+    background-color: aliceblue;
+    margin: 0px 15vw 0px 10vw;
+}
 .headerfake{
     z-index: 1;
     height: 165px;
     background-color: rgb(196, 212, 212);
+}
+.thongtinsanpham{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.left{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* height: 900px; */
+}
+.hinhanh{
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+.hinhanh>div{
+    width: 100%;
+    position: relative;
+}
+.hinhanh>div>img{
+    height: 300px;
+    max-width: 90%;
+}
+.list-img{
+    height: 100px;
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.list-img>li{
+    height: 90%;
+    background-color: white;
+    margin: 0px 5px;
+    border: 1px solid rgba(90, 90, 90, 0.482);
+    border-radius: 10px;
+}
+.list-img>li>img{
+    height: 100%;
+}
+.hinhanh>div>button{
+    position: absolute;
+    top:50%;
+    font-size: larger;
+    font-weight: 700;
+    color: whitesmoke;
+    background-color: rgb(203, 203, 203);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    align-items: center;
+}
+.hinhanh>div>button:hover{
+    transform: scale(1.2);
+}
+#back{
+    left: 10px;
+}
+#next{
+    right:10px;
+}
+.right{
+    flex-basis: 45%;
+    background-color: antiquewhite;
+}
+.muahang{
+    padding: 20px;
+    height: fit-content;
+    background-color: white;
+}
+.muahang>p{
+    color: gray;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.muahang>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.muahang>div>div{
+    flex-basis: 49%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 140px;
+    position: relative;
+    justify-items: center;
+}
+.now>h1{
+    margin: 0px;
+    color: red;
+}
+.now>a{
+    bottom:0px;
+    width: 150px;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
+    background-color: rgba(255, 25, 25, 0.813);
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+}
+.monthly>h3{
+    margin: 8px;
+}
+.monthly>a{
+    bottom:0px;
+    width: 150px;
+    font-size: larger;
+    font-weight: 700;
+    color: whitesmoke;
+    background-color: gray;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    transform: scale(0.9);
+}
+.muahang>div>div>a:hover{
+    transform: scale(1.1);
+}
+.muahang>div>p{
+    position: absolute;
+    left:45%;
+    top:10%;
+}
+.muahang>h3{
+    text-align: center;
+}
+.sanphamtuongtu{
+    display: flex;
+    flex-direction: column;
+}
+.sanphamtuongtu>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+.sptt:hover{
+    transform: scale(1.1);
+
+}
+.sptt{
+    background-color: white;
+    flex-basis: 23%;
+    border-radius: 10px;
+}
+.sptt>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.sptt>a>img{
+    width: 90%;
+}
+
+.sptt>a>div{
+    width: 80%;
+}
+.sptt>a>div>p{
+    color: red;
+    font-size: larger;
+    font-weight: 600;
+    border-bottom: 2px solid red;
 }
 .vote{
     padding:20px;
