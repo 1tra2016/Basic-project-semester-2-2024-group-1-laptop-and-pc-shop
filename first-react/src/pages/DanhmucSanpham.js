@@ -58,7 +58,7 @@ const DanhmucSanpham = () =>{
                           src=".\images\Laptop.png"
                         />
                         <div className="textsp">
-                          <a href="">
+                          <a href="/ChitietSanpham">
                             <div className="tensanpham">
                               [New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W
                             </div>

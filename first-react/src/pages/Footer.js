@@ -2,6 +2,7 @@ import './../css/Fooder.css';
 import React from 'react';
 
 function Footer(){
+  
     return(
         <footer>
             <div className="top">

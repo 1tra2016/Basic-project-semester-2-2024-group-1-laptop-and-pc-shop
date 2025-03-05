@@ -1,7 +1,7 @@
 *{
     font-family:Arial, Helvetica, sans-serif;
 }
-body{
+.body{
     background-color: whitesmoke;
 }
 a{
@@ -15,10 +15,13 @@ ion-icon {
     vertical-align:top;
     margin-left: 3px;
 }
+button{
+    cursor: pointer;
+}
 .main{
     position: relative;
-    background-color: aliceblue;
-    margin: 0px 15vw 0px 10vw;
+    background-color: rgb(245,245,245);
+    margin: 0px 10vw 0px 10vw;
 }
 .headerfake{
     z-index: 1;
@@ -35,10 +38,10 @@ ion-icon {
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    background-color: white;
     /* height: 900px; */
 }
 .hinhanh{
+    background-color: white;
     text-align: center;
     width: 100%;
     padding: 10px 0px;
@@ -92,11 +95,83 @@ ion-icon {
 #next{
     right:10px;
 }
+.khuyenmai{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:20px 0px;
+}
+.quatang{
+    flex-basis: 45%;
+    border: 2px solid rgb(47, 255, 75);
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: white;
+}
+.quatang>h4{
+    position: absolute;
+    top:-40px;
+    background-color: rgb(22,198,12);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+}
+.quatang>li{
+    margin: 10px;
+    font-size: 13px;
+}
+.baohanh{
+    flex-basis: 45%;
+    border: 2px solid rgb(43,128,221);
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: white;
+}
+.baohanh>h4{
+    position: absolute;
+    top:-40px;
+    background-color: rgb(43,128,221);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+}
+.baohanh>li{
+    margin: 10px 10px;
+    font-size: 13px;
+}
+.baohanh>li>p{
+    margin: 5px;
+    text-align: end;
+    color: red;
+}
+.more{
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px gray;
+}
+.more>h3{
+    margin: 0px;
+}
+.more>span:hover {
+    color: blue;
+    cursor: pointer; /* Biến con trỏ thành bàn tay giống thẻ <a> */
+}
+.more>h3>ion-icon{
+    color: orange;
+}
 .right{
     flex-basis: 45%;
-    background-color: antiquewhite;
 }
 .muahang{
+    border-radius: 20px;
+    background-color: white;
     padding: 20px;
     height: fit-content;
     background-color: white;
@@ -131,7 +206,7 @@ ion-icon {
     width: 150px;
     font-size: larger;
     font-weight: 700;
-    color: black;
+    color: whitesmoke;
     background-color: rgba(255, 25, 25, 0.813);
     border: 2px solid rgb(78, 78, 78);
     border-radius: 20px;
@@ -148,7 +223,7 @@ ion-icon {
     font-size: larger;
     font-weight: 700;
     color: whitesmoke;
-    background-color: gray;
+    background-color: rgb(43,128,221);
     border: 1px solid rgb(78, 78, 78);
     border-radius: 20px;
     padding: 20px;
@@ -166,6 +241,31 @@ ion-icon {
 }
 .muahang>h3{
     text-align: center;
+}
+.thongso{   
+    margin-top: 20px;
+    background-color: white;
+    justify-items: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid gray;
+    padding: 8px;
+}
+th {
+    text-align: center;
+    width: max-content;
+}
+th>ion-icon{
+    font-size: 30px;
+}
+.table>tbody>tr:nth-child(2n-1){
+    background-color: #f2f2f2;
 }
 .sanphamtuongtu{
     display: flex;
@@ -205,9 +305,12 @@ ion-icon {
     font-weight: 600;
     border-bottom: 2px solid red;
 }
+.binhluan{
+    background-color: white;
+    border-radius: 20px;
+}
 .vote{
-    padding:20px;
-    /* border: 1px solid black; */
+    padding:50px;
 }
 .ketquadanhgia{
     display: flex;
@@ -256,7 +359,7 @@ ion-icon {
 #progressBar{
     margin: 0px 10px 0px 10px;
     height: 30px;
-    width: 90%;
+    width: 85%;
 }
 .locdanhgia{
     display: flex;
@@ -276,6 +379,9 @@ ion-icon {
     border: 1px solid rgba(0, 0, 0, 0.37);
     border-radius: 25px;
     padding: 10px;
+}
+.locdanhgia>ul>li:hover{
+    cursor: pointer;
 }
 .locdanhgia>ul>li:first-child, .locdanhgia>ul>li:hover{
     color: red;
