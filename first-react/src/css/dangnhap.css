@@ -42,8 +42,7 @@ html, body {
     color: #333;
 }
 
-.dangnhap input[type="email"],
-.dangnhap input[type="password"] {
+.dangnhap input{
     width: 80%;
     padding: 10px;
     margin: 20px;

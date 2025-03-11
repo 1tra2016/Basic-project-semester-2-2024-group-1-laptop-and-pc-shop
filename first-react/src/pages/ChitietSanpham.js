@@ -1,10 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { userAPI, itemAPI } from "../utils/APIs";
 import Myheader from "./Myheader"
 import '../css/ChitietSanpham.css';
 import Footer from "./Footer"
 
-function ChitietSanpham(){
-    return(
+function ChitietSanpham()  {
+  const [item, setItem] = useState([]);
+  const [imgs, setImgs] = useState([]);
+  const [bigimg, setBigimg] = useState("https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g5__arp.jpg");
+  const { id } = useParams(); // Lấy ID từ URL
+  const [user, setUser] = useState(null);
+  
+
+  const fetchItems = async () => {
+    try {
+      const response = await itemAPI.get(`/${id}`); 
+      setItem(response.data);
+    } catch (error) {
+      console.error("Error fetching item:", error);
+    }
+  };
+  useEffect(() => {
+    fetchItems();
+  }, [id]);
+
+  useEffect(() => {
+    if (Array.isArray(item.image) && item.image.length > 0) {
+      setImgs(item.images); // Khi API trả về dữ liệu, cập nhật ảnh
+      setBigimg(item.image[0]); // Ảnh đầu tiên làm ảnh chính
+    }
+  }, [item.image]); // Chỉ chạy khi `item.image` thay đổi
+  
+  
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+        setUser(JSON.parse(storedUser));
+    }
+}, []);
+
+  const mua = async (e) => {
+    e.preventDefault(); // Ngăn reload trang
+    if (!user) {
+        alert("Bạn chưa đăng nhập");
+        return;
+    }
+    try {
+        // Bước 1: Lấy dữ liệu user hiện tại
+        const response = await userAPI.get(`/${user.id}`);
+        const currentCart = response.data.cart || []; // Nếu cart chưa có, đặt là []
+
+        // Bước 2: Kiểm tra sản phẩm đã tồn tại chưa
+        const itemIndex = currentCart.findIndex(item => item.id === id);
+        
+        if (itemIndex !== -1) {
+            // Nếu sản phẩm đã có, tăng số lượng lên 1
+            currentCart[itemIndex].number += 1;
+        } else {
+            // Nếu chưa có, thêm sản phẩm mới với số lượng là 1
+            currentCart.push({ id, number: 1 });
+        }
+
+        // Bước 3: Cập nhật giỏ hàng trên server
+        await userAPI.patch(`/${user.id}`, { cart: currentCart });
+        
+        // Bươcs 4: Cập nhật số lượng sảnphamra còn lại
+        const remain = item.remain - 1
+        alert("số lượng còn lại: "+remain)
+        await itemAPI.patch(`/${item.id}`, { remain: remain });
+
+        alert("Thêm vào giỏ hàng thành công!");
+        fetchItems();
+    } catch (error) {
+      console.error("Lỗi khi thêm vào giỏ hàng:", error.response?.data || error.message);
+    }
+  };
+
+  return(
         <div className="body">
             <Myheader/>
             <div className="main">
@@ -14,38 +87,24 @@ function ChitietSanpham(){
                     <div>
                       <img
                         alt=""
-                        src="./images/8610_acer_gaming_nitro_v_2023_laptop_gaming_quoc_dan_1_2ffda667ab8d4b8a9ea8eccdcc25b36e_1024x1024.webp"
+                        src={bigimg}
                       />
-                      <button id="back">
-                        <a href="#">
-                          <ion-icon name="arrow-back-outline" />
-                        </a>
-                      </button>
-                      <button id="next">
-                        <a href="#">
-                          <ion-icon name="arrow-forward-outline" />
-                        </a>
-                      </button>
                     </div>
                     <ul className="list-img">
-                      <li>
-                        <img
-                          alt=""
-                          src="./images/8610_acer_gaming_nitro_v_2023_laptop_gaming_quoc_dan_1_2ffda667ab8d4b8a9ea8eccdcc25b36e_1024x1024.webp"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          alt=""
-                          src="./images/8610_acer_gaming_nitro_v_2023_laptop_gaming_quoc_dan_1_2ffda667ab8d4b8a9ea8eccdcc25b36e_1024x1024.webp"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          alt=""
-                          src="./images/8610_acer_gaming_nitro_v_2023_laptop_gaming_quoc_dan_1_2ffda667ab8d4b8a9ea8eccdcc25b36e_1024x1024.webp"
-                        />
-                      </li>
+                    {item.images != null ? (
+                      item.images.map((img, index) => (
+                        <li>
+                          <img
+                            key={index}
+                            src={img}
+                            alt={`Thumbnail ${index}`}
+                            onClick={() => setBigimg(img)}
+                          />
+                        </li>
+                      ))
+                    ) : (
+                      <p>Đang tải ảnh...</p> // Hiển thị text khi API chưa trả về dữ liệu
+                    )}
                     </ul>
                   </div>
                   <div className="khuyenmai">
@@ -121,22 +180,22 @@ function ChitietSanpham(){
                 <div className="right">
                   <div className="muahang">
                     <h1>
-                      Tên sản phẩm sẽ dài lằng ngoành và to ra một chút để người dùng chú
-                      ý, chắc là sẽ cần?
+                      {item.name}
                     </h1>
                     <p>Mua ngay chỉ với</p>
                     <div>
                       <div className="now">
-                        <h1>19.999.000 đ</h1>
-                        <a href="">Mua dứt!</a>
+                        <h1>{item.price} đ</h1>
+                        <a href="" onClick={mua}>Mua dứt!</a>
                       </div>
                       <div className="monthly">
-                        <h3>1.999.000 đ/tháng</h3>
-                        <a href="">Trả góp</a>
+                        <h3>{item.monthly} đ/tháng</h3>
+                        <a href="" onClick={mua}>Trả góp</a>
                       </div>
                       <p>hoặc</p>
                     </div>
                     <h3>Giá ưu đãi, mua ngay cho nóng, đừng bỏ lỡ</h3>
+                    <h3>Số lượng sản phẩm chỉ còn: {item.remain} sản phẩm</h3>
                   </div>
                   <div className="thongso">
                     <h3>Thông số kĩ thuật của sản phẩm</h3>
@@ -145,7 +204,7 @@ function ChitietSanpham(){
                         <tr>
                           <th>CPU</th>
                           <td>
-                            AMD Ryzen 7735H (3.20 GHz - 4.75 GHz, 8 cores, 16 threads)
+                            {item.cpu}
                           </td>
                           <th>
                             <ion-icon name="checkmark-circle-outline" />
@@ -153,26 +212,25 @@ function ChitietSanpham(){
                         </tr>
                         <tr>
                           <th>Ram</th>
-                          <td>Ram 16GB LPDDR5 6400MHz</td>
+                          <td>{item.ram}</td>
                           <th>
                             <ion-icon name="checkmark-circle-outline" />
                           </th>
                         </tr>
                         <tr>
                           <th>Ổ cứng</th>
-                          <td>512 GB SSD</td>
+                          <td>{item.drive}</td>
                           <th />
                         </tr>
                         <tr>
                           <th>Card đồ họa</th>
-                          <td>AMD Radeon 680M</td>
+                          <td>{item.card}</td>
                           <th />
                         </tr>
                         <tr>
                           <th>Màn hình</th>
                           <td>
-                            14’’ 2.8K (2880 x 1800) LED backlight 400 nits, anti-glare
-                            IPS, color gamut 100% sRGB, 90Hz
+                          {item.screen}
                           </td>
                           <th>
                             <ion-icon name="checkmark-circle-outline" />
@@ -180,32 +238,31 @@ function ChitietSanpham(){
                         </tr>
                         <tr>
                           <th>Camera</th>
-                          <td>1080P FHD RGB/IR Hybrid with Dual Microphone</td>
+                          <td>{item.camera}</td>
                           <th />
                         </tr>
                         <tr>
                           <th>Kết nối</th>
                           <td>
-                            1x USB Type-C 3.2 Gen 2 2x USB Type-A 3.2 Gen 1 1x HDMI 2.1 1x
-                            Thunderbolt 4 1x 3.5mm 1x USB Type-A 2.9 1x SD card, 1x RJ45
+                          {item.port}
                           </td>
                           <th />
                         </tr>
                         <tr>
                           <th>Trọng lượng</th>
-                          <td>1.5 kg</td>
+                          <td>{item.weight}</td>
                           <th>
                             <ion-icon name="checkmark-circle-outline" />
                           </th>
                         </tr>
                         <tr>
                           <th>Pin</th>
-                          <td>4Cell 62WHr</td>
+                          <td>{item.weight}</td>
                           <th />
                         </tr>
                         <tr>
                           <th>Hệ điều hành</th>
-                          <td>Window 11 bản quyền</td>
+                          <td>{item.system}</td>
                           <th>
                             <ion-icon name="checkmark-circle-outline" />
                           </th>
@@ -221,7 +278,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -234,7 +291,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -247,7 +304,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -260,7 +317,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -275,7 +332,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -288,7 +345,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -301,7 +358,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -314,7 +371,7 @@ function ChitietSanpham(){
                     <a href="#">
                       <img
                         alt=""
-                        src="./images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
+                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
                       />
                       <div>
                         <h4>Tên sản phẩm</h4>
@@ -436,7 +493,7 @@ function ChitietSanpham(){
                 </form>
                 <ul className="list-cmt">
                   <li id="user-cmt">
-                    <img alt="user" src="./images/user.png" />
+                    <img alt="user" src="../images/user.png" />
                     <div>
                       <p>
                         <b>Tên người dùng</b>
@@ -445,7 +502,7 @@ function ChitietSanpham(){
                     </div>
                   </li>
                   <li id="user-cmt">
-                    <img alt="user" src="./images/user.png" />
+                    <img alt="user" src="../images/user.png" />
                     <div>
                       <p>
                         <b>Tên người dùng</b>
@@ -454,7 +511,7 @@ function ChitietSanpham(){
                     </div>
                   </li>
                   <li id="user-cmt">
-                    <img alt="user" src="./images/user.png" />
+                    <img alt="user" src="../images/user.png" />
                     <div>
                       <p>
                         <b>Tên người dùng</b>
@@ -467,7 +524,7 @@ function ChitietSanpham(){
                     </div>
                   </li>
                   <li id="user-cmt">
-                    <img alt="user" src="./images/user.png" />
+                    <img alt="user" src="../images/user.png" />
                     <div>
                       <p>
                         <b>Tên người dùng</b>
@@ -480,7 +537,7 @@ function ChitietSanpham(){
                     </div>
                   </li>
                   <li id="user-cmt">
-                    <img alt="user" src="./images/user.png" />
+                    <img alt="user" src="../images/user.png" />
                     <div>
                       <p>
                         <b>Tên người dùng</b>
@@ -500,3 +557,4 @@ function ChitietSanpham(){
     );
 };
 export default ChitietSanpham;
+

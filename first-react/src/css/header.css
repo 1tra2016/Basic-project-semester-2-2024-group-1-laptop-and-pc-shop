@@ -128,7 +128,9 @@ body {
     right:0px;
     position: absolute;
   }
-  .cart>a{
+  
+  #button{
+    display: inline-block;
     align-content: center;
     height: 40px;
     width: 200px;
@@ -138,8 +140,9 @@ body {
     background-color: red;
     border-radius: 20px;
   }
-  .cart>a:hover{
+  #button:hover{
     color:black;
     background-color: gray;
+    cursor: pointer;
   }
   

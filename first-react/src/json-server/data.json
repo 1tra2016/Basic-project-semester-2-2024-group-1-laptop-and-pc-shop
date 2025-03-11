@@ -1,0 +1,75 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "email": "2025@gmail.com",
+      "name": "tra",
+      "numberphone": "12345",
+      "password": "2025",
+      "cart": [
+        {
+          "id": "1",
+          "number": 7
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "email": "1tra@gmail.com",
+      "name": "1tra2016",
+      "numberphone": "0368344953",
+      "password": "1tra2016"
+    },
+    {
+      "id": "3",
+      "email": "123@gmail.com",
+      "name": "new user",
+      "numberphone": "012345",
+      "password": "123"
+    },
+    {
+      "id": "4",
+      "email": "12345@gmail.com",
+      "name": "trà",
+      "numberphone": "12345",
+      "password": "12345"
+    },
+    {
+      "id": "5",
+      "email": "54321@gmail.com",
+      "name": "trà",
+      "numberphone": "12345",
+      "password": "54321"
+    },
+    {
+      "id": "6",
+      "email": "A@gmail.com",
+      "name": "trà",
+      "numberphone": "12345",
+      "password": "A"
+    }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "name": "[New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W",
+      "price": "19.999.000",
+      "monthly": "1.000",
+      "cpu": "AMD Ryzen 7735H (3.20 GHz - 4.75 GHz, 8 cores, 16 threads)",
+      "ram": "Ram 16GB LPDDR5 6400MHz",
+      "drive": "512 GB SSD",
+      "card": "AMD Radeon 680M",
+      "screen": "14’’ 2.8K (2880 x 1800) LED backlight 400 nits, anti-glare IPS, color gamut 100% sRGB, 90Hz",
+      "camera": "1080P FHD RGB/IR Hybrid with Dual Microphone",
+      "port": "1x USB Type-C 3.2 Gen 2 2x USB Type-A 3.2 Gen 1 1x HDMI 2.1 1x Thunderbolt 4 1x 3.5mm 1x USB Type-A 2.9 1x SD card, 1x RJ45",
+      "weight": "1.5 kg",
+      "system": "window 11",
+      "images": [
+        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g5__arp.jpg",
+        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g520235_1713251055.jpg",
+        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g520232_1713251055.jpg"
+      ],
+      "remain": 95
+    }
+  ]
+}

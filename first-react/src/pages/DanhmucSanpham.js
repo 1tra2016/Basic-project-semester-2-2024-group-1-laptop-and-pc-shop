@@ -2,11 +2,11 @@ import React from "react";
 import Myheader from "./Myheader"
 import '../css/DanhmucSanpham.css'
 import Footer from "./Footer"
+
 const DanhmucSanpham = () =>{
     return(
         <div>
             <Myheader/>
-            
             <div className="khungmainsp">
                 <div className="mainsp">
                   <div className="locphankhuc">
@@ -58,7 +58,7 @@ const DanhmucSanpham = () =>{
                           src=".\images\Laptop.png"
                         />
                         <div className="textsp">
-                          <a href="/ChitietSanpham">
+                          <a href="/ChitietSanpham/1">
                             <div className="tensanpham">
                               [New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W
                             </div>

@@ -5,12 +5,22 @@ import './../css/binh.css';
 import './../css/phi.css';
 import './../css/quanmain.css';
 import './../css/quanfooter.css';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Myheader from './Myheader'
 import Footer from './Footer'
-import { Link } from "react-router-dom"; // Dùng Link để tránh tải lại trang
 
 const Home = () => {
+  // const [user, setUser] = useState(null);
+
+  // useEffect(() => {
+  //   const storedUser = localStorage.getItem("email");
+  //   if (storedUser) {
+  //     setUser(JSON.parse(storedUser)); // Chuyển từ JSON string thành object
+  //   }
+  // }, []);
+  // if (!user){
+  //   user.email="chưa đăng nhập"
+  // }
   
   return (
     <div>
@@ -54,6 +64,7 @@ const Home = () => {
               <i className="fas fa-motorcycle" />
               <span className="uppercase">GIAO HỎA TỐC</span>
               <span className="lowercase">Nội thành TP. HCM trong 4h</span>
+              
             </div>
             <div className="offer">
               <i className="fas fa-hand-holding-usd" />
