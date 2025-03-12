@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { userAPI, itemAPI } from "../utils/APIs";
+import { userAPI, itemAPI } from "../APIs/APIs";
 import '../css/Dangnhap.css'
 import Myheader from "./Myheader";
 import Footer from "./Footer";

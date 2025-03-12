@@ -191,10 +191,12 @@ button{
     height: 140px;
     position: relative;
     justify-items: center;
+    align-items: center;
 }
 .now>h1{
     margin: 0px;
     color: red;
+    text-align: center;
 }
 .now>a{
     bottom:0px;
@@ -229,10 +231,11 @@ button{
 .muahang>div>div>a:hover{
     transform: scale(1.1);
 }
-.muahang>div>p{
+.now>p{
     position: absolute;
-    left:45%;
-    top:10%;
+    right:0%;
+    top:50%;
+    transform: translateX(80%);
 }
 .muahang>h3{
     text-align: center;
@@ -254,52 +257,13 @@ th, td {
 }
 th {
     text-align: center;
-    width: max-content;
+    width: 100px;
 }
-th>ion-icon{
-    font-size: 30px;
-}
+
 .table>tbody>tr:nth-child(2n-1){
     background-color: #f2f2f2;
 }
-.sanphamtuongtu{
-    display: flex;
-    flex-direction: column;
-}
-.sanphamtuongtu>ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0px;
-}
-.sptt:hover{
-    transform: scale(1.1);
 
-}
-.sptt{
-    background-color: white;
-    flex-basis: 23%;
-    border-radius: 10px;
-}
-.sptt>a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0px;
-}
-.sptt>a>img{
-    width: 90%;
-}
-
-.sptt>a>div{
-    width: 80%;
-}
-.sptt>a>div>p{
-    color: red;
-    font-size: larger;
-    font-weight: 600;
-    border-bottom: 2px solid red;
-}
 .binhluan{
     background-color: white;
     border-radius: 20px;

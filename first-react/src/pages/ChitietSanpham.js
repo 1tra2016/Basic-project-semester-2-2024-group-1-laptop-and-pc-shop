@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { userAPI, itemAPI } from "../utils/APIs";
+import { userAPI, itemAPI } from "../APIs/APIs";
 import Myheader from "./Myheader"
 import '../css/ChitietSanpham.css';
 import Footer from "./Footer"
+import ItemList from "./ItemList";
 
 function ChitietSanpham()  {
   const [item, setItem] = useState([]);
-  const [imgs, setImgs] = useState([]);
-  const [bigimg, setBigimg] = useState("https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g5__arp.jpg");
+  const [bigimg, setBigimg] = useState(null);
   const { id } = useParams(); // Lấy ID từ URL
   const [user, setUser] = useState(null);
   
@@ -17,6 +17,7 @@ function ChitietSanpham()  {
     try {
       const response = await itemAPI.get(`/${id}`); 
       setItem(response.data);
+      
     } catch (error) {
       console.error("Error fetching item:", error);
     }
@@ -24,14 +25,14 @@ function ChitietSanpham()  {
   useEffect(() => {
     fetchItems();
   }, [id]);
-
-  useEffect(() => {
-    if (Array.isArray(item.image) && item.image.length > 0) {
-      setImgs(item.images); // Khi API trả về dữ liệu, cập nhật ảnh
-      setBigimg(item.image[0]); // Ảnh đầu tiên làm ảnh chính
-    }
-  }, [item.image]); // Chỉ chạy khi `item.image` thay đổi
   
+  useEffect(()=>{
+    if (item && item.images && item.images.length > 0) {
+      setBigimg(item.images[0]);
+    } else {
+      setBigimg(null); // Hoặc đặt giá trị mặc định
+    }
+  },[item]);
   
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -76,7 +77,6 @@ function ChitietSanpham()  {
       console.error("Lỗi khi thêm vào giỏ hàng:", error.response?.data || error.message);
     }
   };
-
   return(
         <div className="body">
             <Myheader/>
@@ -85,10 +85,15 @@ function ChitietSanpham()  {
                 <div className="left">
                   <div className="hinhanh">
                     <div>
-                      <img
-                        alt=""
-                        src={bigimg}
-                      />
+                      {bigimg ? (
+                        <img
+                          alt=""
+                          src={bigimg}
+                        />
+                      ) : (
+                        <p>Đang tải hình ảnh...</p>
+
+                      )}
                     </div>
                     <ul className="list-img">
                     {item.images != null ? (
@@ -185,14 +190,14 @@ function ChitietSanpham()  {
                     <p>Mua ngay chỉ với</p>
                     <div>
                       <div className="now">
-                        <h1>{item.price} đ</h1>
+                        <h1>{item.price ? item.price.toLocaleString("vi-VN") : "Đang tải..."} VND</h1>
                         <a href="" onClick={mua}>Mua dứt!</a>
+                        <p>hoặc</p>
                       </div>
                       <div className="monthly">
-                        <h3>{item.monthly} đ/tháng</h3>
+                        <h3>{item.monthly ? item.monthly.toLocaleString("vi-VN") : "Đang tải..."} VND/tháng</h3>
                         <a href="" onClick={mua}>Trả góp</a>
                       </div>
-                      <p>hoặc</p>
                     </div>
                     <h3>Giá ưu đãi, mua ngay cho nóng, đừng bỏ lỡ</h3>
                     <h3>Số lượng sản phẩm chỉ còn: {item.remain} sản phẩm</h3>
@@ -203,185 +208,51 @@ function ChitietSanpham()  {
                       <tbody>
                         <tr>
                           <th>CPU</th>
-                          <td>
-                            {item.cpu}
-                          </td>
-                          <th>
-                            <ion-icon name="checkmark-circle-outline" />
-                          </th>
+                          <td>{item.cpu}</td>
                         </tr>
                         <tr>
                           <th>Ram</th>
                           <td>{item.ram}</td>
-                          <th>
-                            <ion-icon name="checkmark-circle-outline" />
-                          </th>
                         </tr>
                         <tr>
                           <th>Ổ cứng</th>
                           <td>{item.drive}</td>
-                          <th />
+                          
                         </tr>
                         <tr>
                           <th>Card đồ họa</th>
                           <td>{item.card}</td>
-                          <th />
                         </tr>
                         <tr>
                           <th>Màn hình</th>
-                          <td>
-                          {item.screen}
-                          </td>
-                          <th>
-                            <ion-icon name="checkmark-circle-outline" />
-                          </th>
+                          <td>{item.screen}</td>
                         </tr>
                         <tr>
                           <th>Camera</th>
                           <td>{item.camera}</td>
-                          <th />
                         </tr>
                         <tr>
                           <th>Kết nối</th>
-                          <td>
-                          {item.port}
-                          </td>
-                          <th />
+                          <td>{item.port}</td>
                         </tr>
                         <tr>
                           <th>Trọng lượng</th>
                           <td>{item.weight}</td>
-                          <th>
-                            <ion-icon name="checkmark-circle-outline" />
-                          </th>
                         </tr>
                         <tr>
                           <th>Pin</th>
                           <td>{item.weight}</td>
-                          <th />
                         </tr>
                         <tr>
                           <th>Hệ điều hành</th>
                           <td>{item.system}</td>
-                          <th>
-                            <ion-icon name="checkmark-circle-outline" />
-                          </th>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
-              <div className="sanphamtuongtu">
-                <ul>
-                  <li className="sptt item1">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item2">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item3">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item4">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                <ul>
-                  <li className="sptt item5">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item6">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item7">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="sptt item8">
-                    <a href="#">
-                      <img
-                        alt=""
-                        src="../images/[New Outlet] Laptop Lenovo Slim 7 16IAH7 82VB0000US.jpg"
-                      />
-                      <div>
-                        <h4>Tên sản phẩm</h4>
-                        <p>19.999.000 đ</p>
-                        <h4>Xem ngay!</h4>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <ItemList rows={1} cols={4}/>
               <div className="binhluan">
                 <div className="vote">
                   <h1>Đánh giá của khách hàng</h1>

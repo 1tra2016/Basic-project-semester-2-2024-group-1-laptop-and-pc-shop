@@ -10,6 +10,22 @@
         {
           "id": "1",
           "number": 7
+        },
+        {
+          "id": "4",
+          "number": 2
+        },
+        {
+          "id": "5baf",
+          "number": 1
+        },
+        {
+          "id": "3",
+          "number": 1
+        },
+        {
+          "id": "5",
+          "number": 2
         }
       ]
     },
@@ -18,43 +34,60 @@
       "email": "1tra@gmail.com",
       "name": "1tra2016",
       "numberphone": "0368344953",
-      "password": "1tra2016"
+      "password": "1tra2016",
+      "cart": [
+        {
+          "id": "2",
+          "number": 2
+        },
+        {
+          "id": "4",
+          "number": 2
+        }
+      ]
     },
     {
       "id": "3",
       "email": "123@gmail.com",
       "name": "new user",
       "numberphone": "012345",
-      "password": "123"
+      "password": "123",
+      "cart": [
+        {
+          "id": "1",
+          "number": 2
+        },
+        {
+          "id": "5baf",
+          "number": 1
+        }
+      ]
     },
     {
-      "id": "4",
-      "email": "12345@gmail.com",
-      "name": "trà",
-      "numberphone": "12345",
-      "password": "12345"
-    },
-    {
-      "id": "5",
-      "email": "54321@gmail.com",
-      "name": "trà",
-      "numberphone": "12345",
-      "password": "54321"
-    },
-    {
-      "id": "6",
-      "email": "A@gmail.com",
-      "name": "trà",
-      "numberphone": "12345",
-      "password": "A"
+      "id": "7d0f",
+      "name": "sera",
+      "numberphone": "0123",
+      "email": "sera@gmail.com",
+      "password": "sera",
+      "cart": [
+        {
+          "id": "2",
+          "number": 1
+        },
+        {
+          "id": "4",
+          "number": 1
+        }
+      ]
     }
   ],
   "items": [
     {
       "id": "1",
-      "name": "[New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W",
-      "price": "19.999.000",
-      "monthly": "1.000",
+      "name": "[New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W là một sản phẩm có tên dài",
+      "price": 29999000,
+      "monthly": 299990,
+      "remain": 93,
       "cpu": "AMD Ryzen 7735H (3.20 GHz - 4.75 GHz, 8 cores, 16 threads)",
       "ram": "Ram 16GB LPDDR5 6400MHz",
       "drive": "512 GB SSD",
@@ -63,13 +96,123 @@
       "camera": "1080P FHD RGB/IR Hybrid with Dual Microphone",
       "port": "1x USB Type-C 3.2 Gen 2 2x USB Type-A 3.2 Gen 1 1x HDMI 2.1 1x Thunderbolt 4 1x 3.5mm 1x USB Type-A 2.9 1x SD card, 1x RJ45",
       "weight": "1.5 kg",
+      "pin": "3 Cells, 59Wh",
       "system": "window 11",
       "images": [
-        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g5__arp.jpg",
-        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g520235_1713251055.jpg",
-        "https://laptopaz.vn/media/product/3458_lenovo_thinkbook_14_g520232_1713251055.jpg"
-      ],
-      "remain": 95
+        "https://laptopaz.vn/media/product/3213_asus_tuf_gaming_a15_fa506nf.jpg",
+        "https://laptopaz.vn/media/product/3213_16606_asus_tuf_gaming_f15_fx506hf_6.jpg",
+        "https://laptopaz.vn/media/product/3213_16606_asus_tuf_gaming_f15_fx506hf_2.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Laptop HP Envy x360 2-in-1 2024",
+      "price": 18690000,
+      "monthly": 10000000,
+      "remain": 97,
+      "cpu": "Ryzen 7 8840H",
+      "ram": "16GB",
+      "drive": "1TB",
+      "card": "AMD Radeon",
+      "screen": "FHD",
+      "camera": "FHD",
+      "port": "4 cổng",
+      "weight": "1.4kg",
+      "pin": "3 cell",
+      "system": "win11",
+      "images": [
+        "https://laptopaz.vn/media/product/3413_3290_hp_envy_x360_14_fa0013dx_2024_1716883081.jpg",
+        "https://laptopaz.vn/media/product/3413_3290_hp_envy_x360_14_fa0013dx_20244_1716883055.jpg",
+        "https://laptopaz.vn/media/product/3413_3290_hp_envy_x360_14_fa0013dx_20245_1716883055.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Lenovo IdeaPad Pro 5 2024 16IMH9 83D4001JVN",
+      "price": 30990000,
+      "monthly": 3099000,
+      "remain": 99,
+      "cpu": "Intel Core Ultra 7 155H (1.40GHz up to 4.80GHz, 24MB Cache)",
+      "ram": "16GB Soldered LPDDR5x-7467MH",
+      "drive": "512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
+      "card": "NVIDIA GeForce RTX 3050 6GB GDDR6",
+      "screen": "16.0inch 2K (2048x1280) OLED, 400nits, Glossy, 100% DCI-P3, 120Hz, Eyesafe®, DisplayHDR™ True Black 500",
+      "camera": "FHD 1080p + IR with Privacy Shutter, ToF Sensor",
+      "port": "1 x USB-A (USB 5Gbps / USB 3.2 Gen 1) 1 x USB-A (USB 5Gbps / USB 3.2 Gen 1), Always On 1 x USB-C® (USB 20Gbps / USB 3.2 Gen 2x2), with USB PD 3.0 and DisplayPort™ 2.1 1 x USB-C® (Thunderbolt™ 4 / USB4® 40Gbps), with USB PD 3.0 and DisplayPort™ 2.1 1 x HDMI® 2.1, up to 4K/60Hz 1 x Headphone / microphone combo jack (3.5mm)",
+      "weight": "1,91kg",
+      "pin": "4 Cell 84WHrs",
+      "system": "Windows 11 bản quyền",
+      "images": [
+        "https://laptopaz.vn/media/product/3333_lenovo_ideapad_pro_5_2024.jpg",
+        "https://laptopaz.vn/media/product/3333_16819_lenovo_ideapad_pro_5_16imh9__7.jpg",
+        "https://bizweb.dktcdn.net/thumb/grande/100/512/769/products/ideapad-pro-5-16irh8-ct4-02-copy.jpg?v=1714387285433"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Lenovo Yoga 6 13ABR8 - AMD Ryzen 5-7530U",
+      "price": 11990000,
+      "monthly": 1199000,
+      "remain": 95,
+      "cpu": "AMD Ryzen 5-7530U",
+      "ram": "RAM 8GB LPDDR4 4266Mhz",
+      "drive": "SSD 256GB NVMe",
+      "card": "AMD Radeon Graphic",
+      "screen": "13.3 inch Full HD+ Touch 100% sRG",
+      "camera": "1080P FHD RGB/IR Hybrid with Dual Microphone",
+      "port": "1x USB Type-C 3.2 Gen 2 2x USB Type-A 3.2 Gen 1 1x HDMI 2.1 1x Thunderbolt 4 1x 3.5mm 1x USB Type-A 2.9 1x SD card, 1x RJ45",
+      "weight": "1.5 kg",
+      "pin": "3 Cells, 59Wh",
+      "system": "window 11",
+      "images": [
+        "https://laptoplc.com.vn/wp-content/uploads/2023/10/4.jpeg",
+        "https://laptoplc.com.vn/wp-content/uploads/2023/10/8.jpeg",
+        "https://m.media-amazon.com/images/I/61Hsti1w-IL.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Laptop MSI Modern 14 C12MO-660VN",
+      "price": 9390000,
+      "monthly": 1139000,
+      "remain": 98,
+      "cpu": "Intel Core i5 1235",
+      "ram": "RAM 16GB DDR4",
+      "drive": "SSD 512GB NVM",
+      "card": "Card Intel Iris Xe Graphic",
+      "screen": "14 inch Full HD IP",
+      "camera": "1080P FHD RGB/IR Hybrid with Dual Microphone",
+      "port": "1x USB Type-C 3.2 Gen 2 2x USB Type-A 3.2 Gen 1 1x HDMI 2.1 1x Thunderbolt 4 1x 3.5mm 1x USB Type-A 2.9 1x SD card, 1x RJ45",
+      "weight": "1.5 kg",
+      "pin": "3 Cells, 59Wh",
+      "system": "window 11",
+      "images": [
+        "https://laptop88.vn/media/product/4897_modern.jpg",
+        "https://laptop88.vn/media/product/4897_artboard_8__2_.jpg",
+        "https://cdn2.cellphones.com.vn/x/media/catalog/product/1/_/1_69_1_1.png"
+      ]
+    },
+    {
+      "id": "5baf",
+      "name": "MacBook Pro 14 inch M2 Pro 2023 (10 CPU - 16 GPU - 16GB - 512GB)",
+      "price": 55990000,
+      "monthly": 559900,
+      "remain": 98,
+      "cpu": "Apple M2 Pro chip",
+      "ram": "16GB",
+      "drive": "512 GB SSD",
+      "card": "16 nhân GPU 16 nhân Neural Engine",
+      "screen": "14.2 inches",
+      "camera": "1080P FHD RGB/IR Hybrid with Dual Microphone",
+      "port": "1 x 3.5mm Cổng MagSafe 1x HDMI 1x SDXC",
+      "weight": "1.5 kg",
+      "pin": "70Wh Đi kèm sạc 67W",
+      "system": "MacOS",
+      "images": [
+        "https://cdn2.cellphones.com.vn/x/media/catalog/product/r/o/routers_compare__dg2f68dd3y0y_large_3.jpg",
+        "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/n/in_the_box_14_inch__cla7biqzxe6a_large_3.jpg",
+        "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/k/e/keyboard_14_inch__bjo3gj8bnogi_large_3.jpg"
+      ]
     }
   ]
 }

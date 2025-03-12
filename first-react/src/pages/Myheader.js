@@ -5,6 +5,7 @@ function Myheader(){
   const [isVisible, setIsVisible] = useState(true);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [iscart, setCart] = useState(null);
   
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -12,7 +13,13 @@ function Myheader(){
       setUser(JSON.parse(storedUser)); // Chuyển từ JSON string thành object
     }
   }, []);
-
+  useEffect(()=>{
+    if(user!=null){
+      if(user.cart!=null){
+        setCart(true)
+      }
+    }
+  },[user])
   function cart(){
       const cart = document.querySelector('.hidden');
       if (!isVisible){
@@ -110,9 +117,9 @@ function Myheader(){
                 <p>Bạn chưa đăng nhập</p>
               )}
               
-              {user?.cart && user.cart.length > 0 ? (
+              {iscart==true ? (
                 <div className="sub">
-                  <img onClick={check_cart} src="../images/cart_item.jpg" alt="Empty Cart"></img>
+                  <img onClick={check_cart} src="../images/cart_item.jpg" alt="Cart not Empty"></img>
                   <br></br>
                   <a href="#" id="button" >Xem giỏ hàng</a>
                 </div>

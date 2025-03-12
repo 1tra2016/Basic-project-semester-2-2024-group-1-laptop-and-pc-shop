@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { userAPI } from "../utils/APIs";
+import { userAPI } from "../APIs/APIs";
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
