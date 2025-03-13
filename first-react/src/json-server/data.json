@@ -9,7 +9,7 @@
       "cart": [
         {
           "id": "1",
-          "number": 7
+          "number": 9
         },
         {
           "id": "4",
@@ -21,7 +21,7 @@
         },
         {
           "id": "3",
-          "number": 1
+          "number": 2
         },
         {
           "id": "5",
@@ -79,6 +79,13 @@
           "number": 1
         }
       ]
+    },
+    {
+      "id": "0abe",
+      "name": "Trà",
+      "numberphone": "012345",
+      "email": "12345@gmail.com",
+      "password": "12345"
     }
   ],
   "items": [
@@ -87,7 +94,7 @@
       "name": "[New 100%] Laptop Asus TUF Gaming A15 FA506NF-HN005W là một sản phẩm có tên dài",
       "price": 29999000,
       "monthly": 299990,
-      "remain": 93,
+      "remain": 91,
       "cpu": "AMD Ryzen 7735H (3.20 GHz - 4.75 GHz, 8 cores, 16 threads)",
       "ram": "Ram 16GB LPDDR5 6400MHz",
       "drive": "512 GB SSD",
@@ -131,7 +138,7 @@
       "name": "Lenovo IdeaPad Pro 5 2024 16IMH9 83D4001JVN",
       "price": 30990000,
       "monthly": 3099000,
-      "remain": 99,
+      "remain": 98,
       "cpu": "Intel Core Ultra 7 155H (1.40GHz up to 4.80GHz, 24MB Cache)",
       "ram": "16GB Soldered LPDDR5x-7467MH",
       "drive": "512GB SSD M.2 2242 PCIe® 4.0x4 NVMe®",
