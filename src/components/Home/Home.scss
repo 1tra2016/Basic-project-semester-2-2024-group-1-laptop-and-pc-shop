@@ -1,0 +1,13 @@
+@import "../../css-config/mixins.scss";
+
+.main-content {
+    position: relative;
+    z-index: 100; // Đặt z-index thấp hơn header (2000) nhưng cao hơn banner (1)
+    .layout {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 1200px;
+        }
+    }
+}

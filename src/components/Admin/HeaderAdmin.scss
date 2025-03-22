@@ -1,0 +1,56 @@
+.header-admin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 16.9%;
+    max-width: 90%; /* Giảm chiều dài bên trái */
+    padding: 10px 20px;
+    background-color: #fff; /* White background */
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .left {
+        display: flex;
+        align-items: center;
+
+        .menu-icon {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+
+        .user-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .login-button,
+        .logout-button {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+
+            .logout-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}

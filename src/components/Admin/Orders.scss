@@ -1,0 +1,135 @@
+.orders {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .orders-header-container {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .orders-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .search-bar {
+                display: flex;
+                gap: 10px;
+
+                input {
+                    padding: 8px;
+                    font-size: 14px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    width: 300px;
+                }
+
+                button {
+                    padding: 8px 16px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+            }
+
+            .add-order-button {
+                padding: 8px 16px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #218838;
+                }
+            }
+        }
+    }
+
+    .orders-table-container {
+        overflow-x: auto;
+
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+            thead {
+                background-color: #f8f9fa;
+
+                th {
+                    padding: 12px;
+                    text-align: left;
+                    font-weight: 600;
+                    border-bottom: 1px solid #dee2e6;
+                    font-size: 14px;
+                    white-space: nowrap;
+                }
+            }
+
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        background-color: #f8f9fa;
+                    }
+
+                    td {
+                        padding: 12px;
+                        border-bottom: 1px solid #dee2e6;
+                        font-size: 14px;
+                        white-space: nowrap;
+
+                        &:last-child {
+                            display: flex;
+                            gap: 8px;
+                        }
+                    }
+                }
+            }
+
+            .update-button {
+                padding: 6px 12px;
+                background-color: #ffc107;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #e0a800;
+                }
+            }
+
+            .delete-button {
+                padding: 6px 12px;
+                background-color: #dc3545;
+                color: white;
+                border: none;
+                border-radius: 4px; // Sửa lỗi: bỏ ký hiệu "|"
+                cursor: pointer;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #c82333;
+                }
+            }
+        }
+    }
+}

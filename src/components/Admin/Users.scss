@@ -1,0 +1,202 @@
+.dashboard {
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.users {
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .users-header-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        .users-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            h2 {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                font-size: 24px;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            .create-user-button {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #6f42c1;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                svg {
+                    margin-right: 5px;
+                }
+
+                &:hover {
+                    background-color: #5a32a3;
+                }
+            }
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+
+    .search-filter-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+
+            input {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-right: 10px;
+            }
+
+            .search-button {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #6f42c1;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                svg {
+                    margin-right: 5px;
+                }
+
+                &:hover {
+                    background-color: #5a32a3;
+                }
+            }
+        }
+
+        .time-filter {
+            display: flex;
+
+            .filter-button {
+                padding: 10px 20px;
+                background-color: #6c757d;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-left: 10px;
+
+                &:hover {
+                    background-color: #5a6268;
+                }
+            }
+        }
+    }
+
+    .users-table-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .users-table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th, td {
+                padding: 10px;
+                border: 1px solid #ccc;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f8f9fa;
+            }
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            .details-button {
+                padding: 5px 10px;
+                background-color: #17a2b8;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-right: 5px;
+
+                &:hover {
+                    background-color: #138496;
+                }
+            }
+
+            .edit-button {
+                padding: 5px 10px;
+                background-color: #ffc107;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-right: 5px;
+
+                &:hover {
+                    background-color: #e0a800;
+                }
+            }
+
+            .delete-button {
+                padding: 5px 10px;
+                background-color: #dc3545;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c82333;
+                }
+            }
+        }
+    }
+}

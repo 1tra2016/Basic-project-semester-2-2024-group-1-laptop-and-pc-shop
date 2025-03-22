@@ -1,0 +1,64 @@
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: transform 0.2s;
+    width: 100%; // Sử dụng 100% chiều rộng trong grid
+    height: 250px; // Chiều cao cố định, khớp với hình ảnh
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .thumbnail {
+        width: 150px; // Khớp với width của <img>
+        height: 150px; // Khớp với height của <img>
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+
+        img {
+            object-fit: contain; // Giữ toàn bộ hình ảnh
+            max-width: 150px;
+            max-height: 150px;
+        }
+    }
+
+    .prod-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        flex-grow: 1; // Đảm bảo phần details lấp đầy không gian còn lại
+
+        .name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+            margin-bottom: 10px; // Khoảng cách giữa name và price
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff0000; // Đổi màu giá thành đỏ
+            text-align: center;
+        }
+    }
+}

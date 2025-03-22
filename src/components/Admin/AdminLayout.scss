@@ -1,0 +1,20 @@
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light gray background */
+
+    .admin-content {
+        display: flex;
+        flex: 1;
+        margin-top: -40px; /* Adjust for the height of the fixed header */
+        margin-left: 220px; /* Adjust for the width of the fixed menu */
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            overflow-y: auto;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+// filepath: /c:/Users/admin/OneDrive/Desktop/New folder (2)/client/src/mockData.js
+export const products = [
+    {
+        id: 1,
+        name: "Sony WH-1000XM5",
+        price: "187",
+        image: "/image/tainghe4.png",
+        description: "High-quality noise-canceling headphones.",
+        category: "Headphones",
+    },
+    {
+        id: 2,
+        name: "Laptop Asus",
+        price: "80",
+        image: "/image/asus1.png",
+        description: "Powerful laptop for all your needs.",
+        category: "Laptops",
+    },
+    {
+        id: 3,
+        name: "[New 100%] Laptop MSI Cyborg 15",
+        price: "99",
+        image: "/image/msi1.jpg",
+        description: "Gaming laptop with high performance.",
+        category: "Laptops",
+    },
+    {
+        id: 4,
+        name: "[New 100%] HP Victus 15",
+        price: "120",
+        image: "/image/hp1.jpg",
+        description: "Reliable laptop for everyday use.",
+        category: "Laptops",
+    },
+    {
+        id: 5,
+        name: "[New 100%] Laptop Dell Inspiron 15",
+        price: "159.5",
+        image: "/image/dell.jpg",
+        description: "Versatile laptop for work and play.",
+        category: "Laptops",
+    },
+    {
+        id: 6,
+        name: "[New 100%] Laptop Dell Inspiron 16",
+        price: "260",
+        image: "/image/dell3.jpg",
+        description: "High-performance laptop with large display.",
+        category: "Laptops",
+    },
+    {
+        id: 7,
+        name: "[New 100%] Laptop Asus Expert Book",
+        price: "349",
+        image: "/image/asus5.jpg",
+        description: "Lightweight and powerful business laptop.",
+        category: "Laptops",
+    },
+    {
+        id: 8,
+        name: "[New Outlet] Laptop Lenovo Slim 7",
+        price: "250",
+        image: "/image/lenovo2.jpg",
+        description: "Slim and stylish laptop with great performance.",
+        category: "Laptops",
+    },
+];
+export default  products;

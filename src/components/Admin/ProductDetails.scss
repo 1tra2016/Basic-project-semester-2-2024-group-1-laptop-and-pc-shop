@@ -1,0 +1,18 @@
+.product-details {
+    padding: 20px;
+    .product-info {
+        margin-bottom: 20px;
+    }
+    .thumbnail, .product-images {
+        margin-top: 20px;
+    }
+    .product-images img {
+        margin-right: 10px;
+    }
+    .error-message {
+        color: red;
+    }
+    button {
+        margin-top: 20px;
+    }
+}
